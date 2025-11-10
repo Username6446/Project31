@@ -120,7 +120,6 @@ inline void FwdList<T>::AddToTail(const T& data)
 template<typename T>
 inline void FwdList<T>::DeleteAll()
 {
-	auto tmp = head;
 	while (!isEmpty())
 	{
 		removeHead();
