@@ -23,6 +23,7 @@ private:
 	size_t size = 0;
 public:
 	FwdList() = default;
+	~FwdList();
 	void addHead(const T& data);
 	void print() const;
 	bool isEmpty() const;
@@ -31,6 +32,12 @@ public:
 	void AddToTail(const T& data);
 	void DeleteAll();
 };
+
+template<typename T>
+inline FwdList<T>::~FwdList()
+{
+	DeleteAll();
+}
 
 template<typename T>
 inline void FwdList<T>::addHead(const T& data)
