@@ -121,12 +121,8 @@ template<typename T>
 inline void FwdList<T>::DeleteAll()
 {
 	auto tmp = head;
-	while (tmp != nullptr)
+	while (!isEmpty())
 	{
-		head = head->next;
-		--size;
-		auto tmp1 = tmp;
-		tmp = tmp->next;
-		delete tmp1;
+		removeHead();
 	}
 }
